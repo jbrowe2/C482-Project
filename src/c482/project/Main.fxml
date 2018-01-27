@@ -17,7 +17,7 @@
     </top>
     <center>
         <GridPane alignment="center" hgap="20" vgap="0">
-            <BorderPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+            <BorderPane GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="bordered">
                 <top>
                     <HBox>
                         <Label>Parts</Label>
@@ -59,7 +59,7 @@
                     </HBox>
                 </bottom>
             </BorderPane>
-            <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="bordered">
                 <top>
                     <HBox>
                         <Label>Products</Label>

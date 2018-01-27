@@ -24,6 +24,9 @@ public class C482Project extends Application {
         
         Scene scene = new Scene(root);
         
+        // Add the stylesheets to the scene.
+        scene.getStylesheets().add("Styles/application.css");
+        
         stage.setScene(scene);
         stage.show();
     }
