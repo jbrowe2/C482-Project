@@ -2,13 +2,91 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c482.project.MainController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
-</AnchorPane>
+<BorderPane id="BorderPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c482.project.MainController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    <top>
+        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label">Inventory Management System</Label>
+    </top>
+    <center>
+        <GridPane alignment="center" hgap="20" vgap="0">
+            <BorderPane GridPane.columnIndex="0" GridPane.rowIndex="0">
+                <top>
+                    <Label>Parts</Label>
+                    <!-- TODO: Add controls -->
+                </top>
+                <center>
+                    <TableView fx:id="parts">
+                        <columns>
+                            <TableColumn text="Part ID">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="partId" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Part Name">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="partName" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Inventory Level">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="inventoryLevel" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Price/Cost per Unit">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="pricePerUnit" />
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </center>
+                <bottom>
+                    <!-- TODO: Add controls -->
+                </bottom>
+            </BorderPane>
+            <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <top>
+                    <Label>Products</Label>
+                    <!-- TODO: Add controls -->
+                </top>
+                <center>
+                    <TableView fx:id="products">
+                        <columns>
+                            <TableColumn text="Product ID">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="productId" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Product Name">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="productName" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Inventory Level">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="inventoryLevel" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn text="Price per Unit">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="pricePerUnit" />
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </center>
+                <bottom>
+                    <!-- TODO: Add controls -->
+                </bottom>
+            </BorderPane>
+        </GridPane>
+    </center>
+</BorderPane>
