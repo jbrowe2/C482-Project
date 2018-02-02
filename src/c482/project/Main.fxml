@@ -8,99 +8,116 @@
 <?import javafx.scene.control.cell.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="MainPane" prefHeight="400" prefWidth="700" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c482.project.MainController">
+<BorderPane id="MainPane" prefHeight="400" prefWidth="700" stylesheets="@../../Styles/application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="c482.project.MainController">
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
     <top>
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" styleClass="window-title">Inventory Management System</Label>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" styleClass="window-title">Inventory Management System</Label>
     </top>
     <center>
         <GridPane alignment="center" hgap="20" vgap="0">
-            <BorderPane GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="bordered">
-                <top>
-                    <HBox>
-                        <Label styleClass="section-title">Parts</Label>
-                        <Button>Search</Button>
-                        <TextField />
-                    </HBox>
-                </top>
-                <center>
-                    <TableView fx:id="parts">
-                        <columns>
-                            <TableColumn text="Part ID">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="partId" />
-                                </cellValueFactory>
-                            </TableColumn>
-                            <TableColumn text="Part Name">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="partName" />
-                                </cellValueFactory>
-                            </TableColumn>
-                            <TableColumn text="Inventory Level">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="inventoryLevel" />
-                                </cellValueFactory>
-                            </TableColumn>
-                            <TableColumn text="Price/Cost per Unit">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="pricePerUnit" />
-                                </cellValueFactory>
-                            </TableColumn>
-                        </columns>
-                    </TableView>
-                </center>
-                <bottom>
-                    <HBox>
-                        <Button>Add</Button>
-                        <Button>Modify</Button>
-                        <Button>Delete</Button>
-                    </HBox>
-                </bottom>
-            </BorderPane>
-            <BorderPane GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="bordered">
-                <top>
-                    <HBox>
-                        <Label styleClass="section-title">Products</Label>
-                        <Button>Search</Button>
-                        <TextField />
-                    </HBox>
-                </top>
-                <center>
-                    <TableView fx:id="products">
-                        <columns>
-                            <TableColumn text="Product ID">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="productId" />
-                                </cellValueFactory>
-                            </TableColumn>
-                            <TableColumn text="Product Name">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="productName" />
-                                </cellValueFactory>
-                            </TableColumn>
-                            <TableColumn text="Inventory Level">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="inventoryLevel" />
-                                </cellValueFactory>
-                            </TableColumn>
-                            <TableColumn text="Price per Unit">
-                                <cellValueFactory>
-                                    <PropertyValueFactory property="pricePerUnit" />
-                                </cellValueFactory>
-                            </TableColumn>
-                        </columns>
-                    </TableView>
-                </center>
-                <bottom>
-                    <HBox>
-                        <Button>Add</Button>
-                        <Button>Modify</Button>
-                        <Button>Delete</Button>
-                    </HBox>
-                </bottom>
-            </BorderPane>
+           <children>
+               <BorderPane styleClass="bordered" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                   <top>
+                       <HBox>
+                          <children>
+                              <Label styleClass="section-title">Parts</Label>
+                              <Button>Search</Button>
+                              <TextField />
+                          </children>
+                       </HBox>
+                   </top>
+                   <center>
+                       <TableView fx:id="parts">
+                           <columns>
+                               <TableColumn text="Part ID">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="partId" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                               <TableColumn text="Part Name">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="partName" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                               <TableColumn text="Inventory Level">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="inventoryLevel" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                               <TableColumn text="Price/Cost per Unit">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="pricePerUnit" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                           </columns>
+                       </TableView>
+                   </center>
+                   <bottom>
+                       <HBox>
+                          <children>
+                              <Button fx:id="addPart">Add</Button>
+                              <Button>Modify</Button>
+                              <Button>Delete</Button>
+                          </children>
+                       </HBox>
+                   </bottom>
+               </BorderPane>
+               <BorderPane styleClass="bordered" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                   <top>
+                       <HBox>
+                          <children>
+                              <Label styleClass="section-title">Products</Label>
+                              <Button>Search</Button>
+                              <TextField />
+                          </children>
+                       </HBox>
+                   </top>
+                   <center>
+                       <TableView fx:id="products">
+                           <columns>
+                               <TableColumn text="Product ID">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="productId" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                               <TableColumn text="Product Name">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="productName" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                               <TableColumn text="Inventory Level">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="inventoryLevel" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                               <TableColumn text="Price per Unit">
+                                   <cellValueFactory>
+                                       <PropertyValueFactory property="pricePerUnit" />
+                                   </cellValueFactory>
+                               </TableColumn>
+                           </columns>
+                       </TableView>
+                   </center>
+                   <bottom>
+                       <HBox>
+                          <children>
+                              <Button>Add</Button>
+                              <Button>Modify</Button>
+                              <Button>Delete</Button>
+                          </children>
+                       </HBox>
+                   </bottom>
+               </BorderPane>
+           </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
         </GridPane>
     </center>
     <bottom>

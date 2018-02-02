@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="MainPane" prefHeight="498.0" prefWidth="700" stylesheets="@../../Styles/application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="c482.project.MainController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                    <Label fx:id="label" minHeight="16" minWidth="69" styleClass="window-title">Add Part</Label>
+                  <RadioButton mnemonicParsing="false" selected="true" text="In-House">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Source" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Outsourced" toggleGroup="$Source" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="120.0" text="ID" />
+                  <TextField id="Id" editable="false" promptText="Auto Gen - Disabled" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="120.0" text="Name" />
+                  <TextField id="Name" promptText="Part Name" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="120.0" text="Inv" />
+                  <TextField id="Inv" promptText="Inv" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="121.0" text="Price/Cost" />
+                  <TextField id="Price" promptText="Price/Cost" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="120.0" text="Max" />
+                  <TextField id="Max" promptText="Max" />
+                  <Label prefHeight="17.0" prefWidth="75.0" text="Min" />
+                  <TextField id="Min" promptText="Min" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="120.0" text="Company Name" />
+                  <TextField id="CompanyName" promptText="Comp Nm" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="680.0" styleClass="component-row">
+               <children>
+                  <Button id="Save" mnemonicParsing="false" text="Save" />
+                  <Button id="Cancel" mnemonicParsing="false" text="Cancel" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
