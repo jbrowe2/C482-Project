@@ -41,24 +41,20 @@ public class MainController implements Initializable {
                 new Product(1, "Product 1", 5, 5.00), 
                 new Product(2, "Product 2", 10, 10.58), 
                 new Product(3, "Product 3", 15, 12.3));
-        
-        addPart.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                try {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("AddPart.fxml"));
-                    Parent root = (Parent) loader.load();
-                    
-                    Stage stage = new Stage();
-                    stage.initModality(Modality.APPLICATION_MODAL);
-                    stage.initStyle(StageStyle.UNDECORATED);
-                    stage.setTitle("Add Part");
-                    stage.setScene(new Scene(root)); 
-                    stage.show();
-                } catch (Exception ex) {
-                    Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        });
-    }    
+    }
+    
+    @FXML
+    void addPartButtonAction(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("AddPart.fxml"));
+            Parent windowRoot = (Parent) loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Add Part");
+            stage.setScene(new Scene(windowRoot));
+            stage.show();
+        } catch (Exception e) {
+            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE, null, e);
+        }
+    }
     
 }

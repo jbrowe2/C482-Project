@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane id="MainPane" prefHeight="498.0" prefWidth="700" stylesheets="@../../Styles/application.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="c482.project.MainController">
+<BorderPane prefHeight="498.0" prefWidth="700" styleClass="main-pane" stylesheets="@../../Styles/application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c482.project.AddPartController">
     <padding>
         <Insets bottom="10" left="10" right="10" top="10" />
     </padding>

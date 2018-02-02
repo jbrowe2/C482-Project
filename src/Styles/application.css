@@ -21,6 +21,10 @@ and open the template in the editor.
     -fx-spacing: 10px;
 }
 
+.main-pane {
+    -fx-background-color: #ccc;
+}
+
 .section-title {
     -fx-font-weight: bold;
 }
@@ -28,8 +32,4 @@ and open the template in the editor.
 .window-title {
     -fx-font-size: 30px;
     -fx-text-fill: #000;
-}
-
-#MainPane {
-    -fx-background-color: #ccc;
 }
